@@ -1,0 +1,119 @@
+snippet ( "bracket" iA
+($1)$0
+endsnippet
+
+snippet [ "bracket" iA
+[$1]$0
+endsnippet
+
+snippet { "bracket" iA
+{$1}$0
+endsnippet
+
+snippet | "bracket" iA
+|$1|$0
+endsnippet
+
+snippet \{ "Brace" iA
+\\{ $1 \\}$0
+endsnippet
+
+snippet \left( "Brace" iA
+\left( $1 \right)$0
+endsnippet
+
+snippet \left[ "Brace" iA
+\left[ $1 \right]$0
+endsnippet
+
+snippet \left\{ "Brace" iA
+\left\\{ $1 \right\\}$0
+endsnippet
+
+snippet \langle "Brace" iA
+\langle $1 \rangle$0
+endsnippet
+
+snippet \Arrow "Brace" iA
+\Arrowvert $1 \Arrowvert$0
+endsnippet
+
+snippet mbf "Mathbf" iA
+\mathbf{$1}$0
+endsnippet
+
+snippet mbb "Mathbb" iA
+\mathbb{$1}$0
+endsnippet
+
+snippet mcal "Mathcal" iA
+\mathcal{$1}$0
+endsnippet
+
+snippet beg "begin{} / end{}" bA
+\begin{$1}$2
+	$0
+\end{$1}
+endsnippet
+
+snippet mk "Math" wA
+\$ $1 \$$2
+endsnippet
+
+snippet dm "Math" wA
+\[ 
+$1
+\]$0
+endsnippet
+
+snippet idx "auto subscript" iA
+_{$1}$0
+endsnippet
+
+snippet td "superscript" iA
+^{$1}$0
+endsnippet
+
+snippet // "Fraction" iA
+\\frac{$1}{$2}$0
+endsnippet
+
+snippet newhead "Pattern head" bA
+\documentclass[a4paper]{article}
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\newtheorem{defn}{Definition}[section]
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{exm}{Example}[section]
+\numberwithin{figure}{section}
+\numberwithin{equation}{section}
+
+\title{$1}
+\author{Peng Lingwei}
+\begin{document}
+	
+\maketitle
+\tableofcontents
+\setcounter{section}{$2}
+
+\input{$3}
+$0
+\end{document}
+endsnippet
+
+snippet newfigure "Figure" bA
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{$1}
+	\label{$2}
+	\caption{$3}
+\end{figure}
+$0
+endsnippet
