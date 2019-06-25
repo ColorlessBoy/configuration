@@ -1,0 +1,9 @@
+{
+    "server":"15.164.166.199",
+    "server_port":4396,
+	"local_address":"127.0.0.1",
+    "local_port":1080,
+    "password":"7Lovetoday",
+    "timeout":60,
+    "method":"aes-256-cfb"
+}
