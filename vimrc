@@ -5,7 +5,7 @@ set nocompatible            " Use Vim defaults (much better!)
 
 set number
 set relativenumber
-set nowrap
+set wrap
 set cursorline
 set showcmd
 set history=500
@@ -41,6 +41,9 @@ Plug 'lervag/vimtex'
 " }}}
 
 Plug 'w0rp/ale'
+" grammar checker {{{
+"
+" }}}
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 

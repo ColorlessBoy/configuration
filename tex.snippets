@@ -359,6 +359,10 @@ snippet enq enquote
 # ==================================================
 # Customized snippets
 # ==================================================
+snippet sp "supindex"
+	^{$1}$0
+snippet sb "subindex"
+	_{$1}$0
 snippet mk "inline equation"
 	\$ $1 \$ $0
 snippet dm "multiline equation"
@@ -366,7 +370,11 @@ snippet dm "multiline equation"
 		$1
 	\\]
 	$0
-snippet sp "supindex"
-	^{$1}$0
-snippet sb "subindex"
-	_{$1}$0
+snippet vec "vector"
+	\\vec{$1} $0
+snippet norm "description"
+	\\Arrowvert $1 \\Arrowvert $0
+snippet frame "frame"
+	\\begin{frame}{%1}
+		%0
+	\\end{frame}
