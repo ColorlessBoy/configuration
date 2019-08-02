@@ -4,8 +4,7 @@
 snippet nc \newcommand
 	\\newcommand{\\${1:cmd}}[${2:opt}]{${3:realcmd}} ${0}
 #usepackage
-snippet up \usepackage
-	\\usepackage[${1:options}]{${2:package}} ${0}
+snippet up \usepackage \\usepackage[${1:options}]{${2:package}} ${0}
 #newunicodechar
 snippet nuc \newunicodechar
 	\\newunicodechar{${1}}{${2:\\ensuremath}${3:tex-substitute}}} ${0}
@@ -21,8 +20,7 @@ snippet begin \begin{} ... \end{} block
 	\\end{$1}
 # Tabular
 snippet tab tabular (or arbitrary) environment
-	\\begin{${1:tabular}}{${2:c}}
-		${0:${VISUAL}}
+	\\begin{${1:tabular}}{${2:c}} ${0:${VISUAL}}
 	\\end{$1}
 snippet thm thm (or arbitrary) environment with optional argument
 	\\begin[${1:author}]{${2:thm}}
@@ -223,15 +221,15 @@ snippet rm roman font text
 snippet tt typewriter (monospace) text
 	\\texttt{${1:${VISUAL:text}}}${0}
 #Math font
-snippet mf mathfrak
+snippet mf mathfrak 
 	\\mathfrak{${1:${VISUAL:text}}}${0}
-snippet mc mathcal
+snippet mc mathcal 
 	\\mathcal{${1:${VISUAL:text}}}${0}
 snippet ms mathscr
 	\\mathscr{${1:${VISUAL:text}}}${0}
 snippet mbb mathscr
 	\\mathbb{${1:${VISUAL:text}}}${0}
-snippet mbf mathscr
+snippet mbf mathscr i
 	\\mathbf{${1:${VISUAL:text}}}${0}
 #misc
 snippet ft \footnote
@@ -284,6 +282,8 @@ snippet stackrel \stackrel{}{}
 	\\stackrel{${1:above}}{${2:below}} ${0}
 snippet frac \frac{}{}
 	\\frac{${1:num}}{${2:denom}} ${0}
+snippet fracpd "partial differential"
+	\\frac{\partial{${1:F}}}{\partial{${2:x}}} ${0}
 snippet sum \sum^{}_{}
 	\\sum^{${1:n}}_{${2:i=1}} ${0}
 snippet lim \lim_{}
@@ -336,6 +336,10 @@ snippet lr[ left[ right]
 	\\left[ ${0:${VISUAL}} \\right]
 snippet lra langle rangle
 	\\langle ${0:${VISUAL}} \\rangle
+snippet lrc left lceil right rceil
+	\\left\\lceil ${0:${VISUAL}} \\right\\rceil
+snippet lrf left lfloor right rfloor
+	\\left\\lfloor ${0:${VISUAL}} \\right\\rfloor
 # Code listings
 snippet lst
 	\\begin{listing}[language=${1:language}]
@@ -370,11 +374,11 @@ snippet dm "multiline equation"
 		$1
 	\\]
 	$0
-snippet vec "vector"
-	\\vec{$1} $0
+snippet v "vector"
+	\\v{$1}$0
 snippet norm "description"
-	\\Arrowvert $1 \\Arrowvert $0
-snippet frame "frame"
-	\\begin{frame}{%1}
-		%0
-	\\end{frame}
+	\\Arrowvert $1 \\Arrowvert$0
+snippet norm2 "description"
+	{\\Arrowvert $1 \\Arrowvert}_2$0
+snippet normi "description"
+	{\\Arrowvert $1 \\Arrowvert}_infty$0

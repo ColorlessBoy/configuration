@@ -42,7 +42,7 @@ Plug 'lervag/vimtex'
 
 Plug 'w0rp/ale'
 " grammar checker {{{
-"
+    let g:airline#extensions#ale#enabled = 1
 " }}}
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'

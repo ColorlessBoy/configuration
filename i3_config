@@ -32,6 +32,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
 
+# start chrome
+bindsym $mod+F2 exec google-chrome
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -134,7 +137,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec # exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -169,8 +172,12 @@ bar {
         status_command i3status
 }
 
+
 bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '5%+'"
 bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '5%-'"
-exec_always feh --bg-scale /home/penglingwei/Pictures/wallpaper.jpg
+
+exec xrandr --output USB-C-0 --off --output HDMI-0 --off --output DP-5 --off --output DP-4 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off 
+exec_always compton
+exec_always feh --bg-scale /home/peng/Pictures/wallpaper.jpg
 exec_always netease-cloud-music
 assign [class="netease-cloud-music"] $ws10
