@@ -2,8 +2,7 @@ priority -50
 
 ##############
 # MATH STUFF #
-##############
-
+############## 
 snippet eqnn "Equation without a number" b
 \begin{equation*}
 	${0:${VISUAL}}
@@ -60,6 +59,83 @@ endsnippet
 
 snippet mbf "mathbb" i
 \\mathbf{$1}$0
+endsnippet
+
+snippet v "vec" i
+\\vec{$1}$0
+endsnippet
+
+snippet mk "Inline math" i
+\$ $1 \$$0
+endsnippet
+
+snippet sp "super index" i
+^{$1}$0
+endsnippet
+
+snippet sb "sub index" i
+_{$1}$0
+endsnippet
+
+snippet Ra "Rightarrow" w
+\Rightarrow
+endsnippet
+
+snippet La "Leftarrow" w
+\Leftarrow
+endsnippet
+snippet Lra "Leftrightarrow" i
+\Leftrightarrow
+endsnippet
+
+snippet ra "rightarrow" w
+\rightarrow
+endsnippet
+
+snippet la "leftarrow" w
+\leftarrow
+endsnippet
+
+#===================================================
+priority 1
+snippet lr( "left( right)" i
+\\left( ${1:${VISUAL}} \\right)$0
+endsnippet
+snippet lr| "left| right|" i
+\\left| ${1:${VISUAL}} \\right|$0
+endsnippet
+snippet lr{ "left\{ right\}" i
+\\left\\{ ${1:${VISUAL}} \\right\\}$0
+endsnippet
+snippet lr[ "left[ right]" i
+\\left[ ${1:${VISUAL}} \\right]$0
+endsnippet
+snippet lra "langle rangle" i
+\\langle ${1:${VISUAL}} \\rangle$0
+endsnippet
+snippet lrc "left lceil right rceil" i
+\\left\\lceil ${1:${VISUAL}} \\right\\rceil$0
+endsnippet
+snippet lrf "left lfloor right rfloor" i
+\\left\\lfloor ${1:${VISUAL}} \\right\\rfloor$0
+endsnippet
+
+#===================================================
+priority -1
+snippet ( "bracket" i
+($1)$0
+endsnippet
+
+snippet [ "Bracket" i
+[$1]$0
+endsnippet
+
+snippet { "crul bracket" i
+\{$1\}$0
+endsnippet
+
+snippet \{ "Crul Bracket" i
+\\{$1\\}$0
 endsnippet
 
 # vim:ft=snippets:

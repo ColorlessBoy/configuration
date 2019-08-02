@@ -1,16 +1,5 @@
 #version 1
 #PREAMBLE
-#newcommand
-snippet nc \newcommand
-	\\newcommand{\\${1:cmd}}[${2:opt}]{${3:realcmd}} ${0}
-#usepackage
-snippet up \usepackage \\usepackage[${1:options}]{${2:package}} ${0}
-#newunicodechar
-snippet nuc \newunicodechar
-	\\newunicodechar{${1}}{${2:\\ensuremath}${3:tex-substitute}}} ${0}
-#DeclareMathOperator
-snippet dmo \DeclareMathOperator
-	\\DeclareMathOperator{${1}}{${2}} ${0}
 
 #DOCUMENT
 # \begin{}...\end{}
@@ -321,25 +310,23 @@ snippet multicol2 two-column environment with multicol
 		\columnbreak
 		${0}
 	\\end{multicols}
-snippet \{ \{ \}
-	\\{ ${0} \\}
 #delimiter
 snippet lr left right
 	\\left${1} ${0:${VISUAL}} \\right$1
 snippet lr( left( right)
-	\\left( ${0:${VISUAL}} \\right)
+	\\left( ${1:${VISUAL}} \\right)$0
 snippet lr| left| right|
-	\\left| ${0:${VISUAL}} \\right|
+	\\left| ${1:${VISUAL}} \\right|$0
 snippet lr{ left\{ right\}
-	\\left\\{ ${0:${VISUAL}} \\right\\}
+	\\left\\{ ${1:${VISUAL}} \\right\\}$0
 snippet lr[ left[ right]
-	\\left[ ${0:${VISUAL}} \\right]
+	\\left[ ${1:${VISUAL}} \\right]$0
 snippet lra langle rangle
-	\\langle ${0:${VISUAL}} \\rangle
+	\\langle ${1:${VISUAL}} \\rangle$0
 snippet lrc left lceil right rceil
-	\\left\\lceil ${0:${VISUAL}} \\right\\rceil
+	\\left\\lceil ${1:${VISUAL}} \\right\\rceil$0
 snippet lrf left lfloor right rfloor
-	\\left\\lfloor ${0:${VISUAL}} \\right\\rfloor
+	\\left\\lfloor ${1:${VISUAL}} \\right\\rfloor$0
 # Code listings
 snippet lst
 	\\begin{listing}[language=${1:language}]
@@ -367,15 +354,11 @@ snippet sp "supindex"
 	^{$1}$0
 snippet sb "subindex"
 	_{$1}$0
-snippet mk "inline equation"
-	\$ $1 \$ $0
 snippet dm "multiline equation"
 	\\[
 		$1
 	\\]
 	$0
-snippet v "vector"
-	\\v{$1}$0
 snippet norm "description"
 	\\Arrowvert $1 \\Arrowvert$0
 snippet norm2 "description"
