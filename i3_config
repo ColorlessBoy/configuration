@@ -176,7 +176,8 @@ bar {
 bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '5%+'"
 bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '5%-'"
 
-exec xrandr --output USB-C-0 --off --output HDMI-0 --off --output DP-5 --off --output DP-4 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off 
+# exec xrandr --output USB-C-0 --off --output HDMI-0 --off --output DP-5 --off --output DP-4 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off 
+exec xrandr --output USB-C-0 --off --output HDMI-0 --off --output DP-5 --off --output DP-4 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DP-3 --off --output DP-2 --off --output DP-1 --off --output DP-0 --off
 exec_always compton
 exec_always feh --bg-scale /home/peng/Pictures/wallpaper.jpg
 exec_always netease-cloud-music

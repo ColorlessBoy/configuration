@@ -15,9 +15,6 @@ set tabstop=4               " tab width
 set shiftwidth=4            " multiply lines indentwidth
 set expandtab               " <space> insteads of <tab>
 
-set hlsearch
-exec  "nohlsearch"
-set incsearch
 set ignorecase
 set smartcase
 
@@ -42,7 +39,8 @@ Plug 'lervag/vimtex'
 
 Plug 'w0rp/ale'
 " grammar checker {{{
-    let g:airline#extensions#ale#enabled = 1
+    let g:ale_sign_error = 'E'
+    let g:ale_sign_warning = 'W'
 " }}}
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
