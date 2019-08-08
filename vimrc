@@ -28,6 +28,9 @@ filetype plugin indent on
 "==================================================================
 call plug#begin('~/.vim/plugged')
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 Plug 'lervag/vimtex'
 " vimtex.vim {{{
     let g:tex_flavor='latex'
