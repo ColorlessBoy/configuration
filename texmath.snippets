@@ -61,7 +61,7 @@ snippet mbf "mathbb" i
 \\mathbf{$1}$0
 endsnippet
 
-snippet v "vec" i
+snippet vec "vec" i
 \\vec{$1}$0
 endsnippet
 
@@ -126,16 +126,28 @@ snippet ( "bracket" i
 ($1)$0
 endsnippet
 
-snippet [ "Bracket" i
-[$1]$0
-endsnippet
-
 snippet cb "crul bracket" i
 \{$1\}$0
 endsnippet
 
 snippet \{ "Crul Bracket" i
 \\{$1\\}$0
+endsnippet
+
+snippet alg "algorithm" i
+\begin{algorithm}[H]
+	\caption{$1}
+	\begin{algorithmic}
+		$0
+	\end{algorithmic}
+\end{algorithm}
+endsnippet
+
+snippet frac "\frac{}{}" i
+\\frac{${1:num}}{${2:denom}} ${0}
+endsnippet
+snippet fracpd "partial differential" i
+\\frac{\partial{${1:F}}}{\partial{${2:x}}} ${0}
 endsnippet
 
 # vim:ft=snippets:
