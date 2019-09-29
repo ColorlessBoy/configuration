@@ -35,5 +35,14 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # Install powerlevel9k
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
+# Install Tensorflow-gpu==2.0.0-rc1
+conda create -n tf2.0 python=3.6
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow-gpu=2.0.0-rc1
+conda install cudnn cudatookit numba
+numba -s
 
+# Add conda env into Jupyter-notebook
+conda install ipykernel
+conda activate [name]
+python -m ipykernel install --user --name [name] --display-name [display-name]
 
